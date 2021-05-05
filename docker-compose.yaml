@@ -6,7 +6,10 @@ volumes:
 services:
   kafkaconnect:
     container_name: kafkaconnect
+    # For x86 arch systems
     image: quay.io/evanshortiss/kafka-connect-simple:latest
+    # For arm arch systems
+    # image: quay.io/evanshortiss/kafka-connect-simple:latest-arm
     depends_on:
       - pihole
     volumes:
