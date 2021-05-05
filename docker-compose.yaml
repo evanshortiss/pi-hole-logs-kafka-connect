@@ -12,6 +12,8 @@ services:
     # image: quay.io/evanshortiss/kafka-connect-simple:latest-arm
     depends_on:
       - pihole
+    environment:
+      - KAFKA_HEAP_OPTS=-Xms256m -Xmx512m
     volumes:
       - './kafka-config/:/usr/src/app/config/'
       - 'pihole-logs:/var/pihole-logs/'
