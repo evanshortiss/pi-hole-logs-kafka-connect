@@ -1,9 +1,9 @@
-FROM alpine:3
+FROM alpine:3.12
 
 WORKDIR /usr/src/app
 
 # Bash (sh doesn't work) and OpenJDK are required to run Kafka Connect
-RUN apk add bash openjdk11
+RUN apk add bash openjdk8
 
 RUN mkdir /usr/src/app/config/
 
