@@ -25,7 +25,7 @@ services:
       - 53:53/tcp
       - 53:53/udp
       - 67:67/udp
-      - 8080:80/tcp
+      - 80:80/tcp
     environment:
       TZ: 'Europe/Dublin'
       WEBPASSWORD: 'password'
