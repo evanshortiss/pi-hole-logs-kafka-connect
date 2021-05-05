@@ -112,6 +112,9 @@ cp kafka-config/template.worker.properties kafka-config/worker.properties
 # Set the bootstrap URL, and SASL username and password in worker.properties
 vi kafka-config/worker.properties
 
+# If running on a Raspberry Pi you must use the "latest-arm" image tag
+vi docker-compose.yaml
+
 # Start the Pi-hole and Kafka Connect containers
 docker-compose up
 ```
