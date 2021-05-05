@@ -1,0 +1,5 @@
+# Contains sensitive kafka authentication information
+worker.properties
+
+# Auto generated whenever pi-hole restarts
+01-pihole.conf
