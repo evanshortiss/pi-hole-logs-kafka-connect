@@ -2,9 +2,9 @@ FROM alpine:3.12
 
 WORKDIR /usr/src/app
 
-# Bash is required to run the kafka scripts correctly (not entirely sure why)
-# Using openjdk8 instead of 11 due to issues with apk add when building for ARM
-# on newer alpine versions
+# Bash is required to run the Kafka scripts correctly (not entirely sure why)
+# Java is required to run Kafka Connect. Used openjdk8 instead of 11 due to
+# issues with "apk add" when building for ARM on newer alpine versions
 RUN apk add bash openjdk8
 
 RUN mkdir /usr/src/app/config/
