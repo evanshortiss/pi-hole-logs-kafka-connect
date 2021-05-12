@@ -32,7 +32,7 @@ The general idea is:
 
 A visualisation of this architecture:
 
-![Architecture](/images/architecture.png)
+![Architecture](images/architecture.png)
 
 
 ### Pi-hole
@@ -56,11 +56,11 @@ It's free, and you don't even need to provide a credit card!
 The following image illustrates a user creating a Kafka instance named
 `raspberry-pi`.
 
-![Creating a Kafka Instance](/images/cdrh-kafka-create.png)
+![Creating a Kafka Instance](images/cdrh-kafka-create.png)
 
 You can obtain the bootstrap server URL once the instance has been created.
 
-![Kafka Instance Bootstrap URL](/images/cdrh-kafka-url.png)
+![Kafka Instance Bootstrap URL](images/cdrh-kafka-url.png)
 
 ### Create a Service Account for your Kafka Instance
 
@@ -71,12 +71,12 @@ to obtain a username (client ID) and password (client secret).
 Select the *Service Accounts* section from the side-navigation and click
 *Create service account*. Enter a name, and description then click *Create*.
 
-![Service Account Creation](/images/cdrh-sa-create.png)
+![Service Account Creation](images/cdrh-sa-create.png)
 
 This will create the Service Account and display the client ID and client
 secret. Take note of these, then close the dialog.
 
-![Service Account Details](/images/cdrh-sa-details.png)
+![Service Account Details](images/cdrh-sa-details.png)
 
 ### Create a Kafka Topic for Logs
 
@@ -84,11 +84,11 @@ This is the last task you'll need to perform in the OpenShift Streams UI.
 Select your Kafka instance from the *Kafka Instances* list and click the
 *Create topic* button.
 
-![Topic Creation](/images/cdrh-topic-create.png)
+![Topic Creation](images/cdrh-topic-create.png)
 
 Name the topic `pihole-dnsmasq-logs`, and make sure to set the *Partitions* option to 1. Other settings can be left at the defaults.
 
-![Topic Name](/images/cdrh-topic-name.png)
+![Topic Name](images/cdrh-topic-name.png)
 
 ### Running the Pi-hole and Kafka Connect
 
@@ -123,7 +123,7 @@ Send a few DNS queries to the Pi-hole once `docker-compose up` has finished.
 Do this in another terminal using `nslookup $DOMAIN_NAME 127.0.0.1`. The
 Pi-hole should return results as shown:
 
-![nslookups in terminal](/images/nslookups.png)
+![nslookups in terminal](images/nslookups.png)
 
 ### Verify Pi-hole Log Forwarding
 
@@ -146,11 +146,11 @@ Once Kafkacat has connected you'll be able to view the logs that were forwarded
 to your Kafka Topic by Kafka Connect! The initial entries will be startup logs
 from dnsmasq:
 
-![Kafkacat initial output](/images/kafkacat-command.png)
+![Kafkacat initial output](images/kafkacat-command.png)
 
 But, if you look closely you'll be able to see your queries:
 
-![Kafkacat initial output](/images/kafkacat-nslookups.png)
+![Kafkacat initial output](images/kafkacat-nslookups.png)
 
 ## Creating a Custom Kafka Connect Container Image
 
