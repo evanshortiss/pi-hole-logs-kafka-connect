@@ -32,7 +32,7 @@ The general idea is:
 
 A visualisation of this architecture:
 
-![Architecture](images/architecture.png)
+![Architecture](images/arch.png)
 
 
 ### Pi-hole
