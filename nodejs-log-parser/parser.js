@@ -33,7 +33,7 @@ module.exports = async () => {
         const logstr = message.value.toString('utf8')
         log.debug(`parsing log before: ${logstr}`)
 
-        const result = parse(message.value.toString('utf8'))
+        const result = parse(logstr)
 
         if (result) {
           log.debug('parsing log after: %j', result)
