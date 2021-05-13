@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -r dotenv/config index.js | pino-pretty -t",
-    "start": "node index.js"
+    "nodeshift": "nodeshift --useDeployment --expose",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Evan Shortiss <evanshortiss@gmail.com> (https://evanshortiss.com)",
@@ -26,6 +27,7 @@
     "@types/node": "~15.0.2",
     "dotenv": "~9.0.2",
     "nodemon": "~2.0.7",
+    "nodeshift": "^8.2.0",
     "pino-pretty": "^4.8.0"
   }
 }

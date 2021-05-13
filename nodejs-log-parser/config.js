@@ -4,7 +4,7 @@ const pino = require('pino');
 const { get } = require('env-var')
 
 module.exports = {
-  HTTP_PORT: get('HTTP_PORT').asPortNumber(),
+  HTTP_PORT: get('HTTP_PORT').default('8080').asPortNumber(),
   LOG_LEVEL: get('LOG_LEVEL')
     .default('debug')
     .asEnum(Object.keys(pino.levels.values)),

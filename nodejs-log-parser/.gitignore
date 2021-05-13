@@ -1,5 +1,8 @@
 package-lock.json
 
+# Nodeshift creates a tmp dir for cache etc
+tmp
+
 # Logs
 logs
 *.log
